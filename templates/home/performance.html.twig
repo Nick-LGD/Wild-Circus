@@ -1,14 +1,14 @@
 {% extends 'base.html.twig' %}
 {% block title %}Wild Circus - Performances{% endblock %}
 {% block body %}
-    <h1 class="h1-title-public">Nos performances</h1>
+    <h1 class="h1-title-public mb-5 mt-5">Nos performances</h1>
     <div class="box-perf-page-public">
         {% for performance in performances %}
-            <div class="card mb-3 card-performance-public">
+            <div class="card mb-5 mt-5 card-performance-public">
                 {% if  performance.image is not null %}
                     <img src="{{ vich_uploader_asset(performance, 'imageFile') }}" class="card-img-top" alt="{{ performance.title }}">
                 {% else %}
-                    <img src="{{asset('build/placeholder.jpg')}}" class="card-img-top" alt="{{ performance.title }}">
+                    <img src="assets/images/placeholder.jpg" class="card-img-top" alt="{{ performance.title }}">
                 {% endif %}
                 <div class="card-body">
                     <h5 class="card-title title-card-perf-public">{{ performance.title }}</h5>

@@ -13,7 +13,7 @@ class PlanningFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $faker = Faker\Factory::create('fr_FR');
-        for ($i = 1; $i <= 4; $i++) {
+        for ($i = 1; $i <= 30; $i++) {
             $planing = new Planing();
             $planing->setTitle($faker->word);
             $planing->setLocation($faker->word);

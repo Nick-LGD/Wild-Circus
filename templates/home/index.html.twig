@@ -43,7 +43,7 @@
         </a>
     </div>
     <div class="box-home-element">
-        <h3 class="title-home ">Qui sommes nous ?</h3>
+        <h3 class="title-home mb-5 mt-5 ">Qui sommes nous ?</h3>
         <p class="txt-qsn-home">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque diam ligula, venenatis ut pulvinar id,
             fermentum ac orci. Integer fringilla leo dolor, tincidunt ullamcorper nisi lobortis quis. Nulla et tempus
@@ -57,17 +57,17 @@
     </div>
     <h3 class="title-home">Quelques spectacles</h3>
         {% for performance in performances %}
-            <div class="card mb-5 w-100 h-100 box">
+            <div class="card mb-5 mt-5 w-100 h-100">
                 <div class="card-body">
                     {% if  performance.image is not null %}
                         <img src="{{ vich_uploader_asset(performance, 'imageFile') }}" class="card-img-top"
                              alt="{{ performance.title }}">
                     {% else %}
-                        <img src="{{ asset('images/placeholder.jpg') }}" class="card-img-top"
+                        <img src="assets/images/placeholder.jpg" class="card-img-top"
                              alt="{{ performance.title }}">
                     {% endif %}
                     <div class="card ">
-                        <div class="card-body box2">
+                        <div class="card-body">
                             <h5 class="card-title">{{ performance.title }}</h5>
                             <p class="card-text">{{ performance.description }}</p>
                         </div>

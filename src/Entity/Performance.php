@@ -9,9 +9,8 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
-use Exception;
+
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=PerformanceRepository::class)
@@ -28,9 +27,6 @@ class Performance
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\Length(
-     *     max = 255,
-     *     maxMessage= "Le titre ne doit pas dépasser {{ limit }} cararactères")
      */
     private $title;
 
@@ -41,23 +37,12 @@ class Performance
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Length(
-     *     max = 255,
-     *     maxMessage = "Le lien de l'image ne doit pas dépasser {{ limit }} caractères")
-     *
      */
     private $image;
 
     /**
-     *
      * @Vich\UploadableField(mapping="image_file", fileNameProperty="image")
      * @var File|null
-     * @Assert\File(
-     *    maxSize = "500k",
-     *    maxSizeMessage = "L'image ne doit pas faire plus de {{ limit }} mega-octets.",
-     *    mimeTypes = {"image/gif", "image/jpeg", "image/png", "image/svg+xml", "image/webp"},
-     *    mimeTypesMessage = "Format d'image non reconnu. Veuillez choisir une nouvelle image."
-     *)
      */
     private $imageFile;
 
@@ -111,7 +96,6 @@ class Performance
 
     /**
      * @param File|UploadedFile $imageFile
-     * @throws Exception
      */
     public function setImageFile(?File $imageFile = null): void
     {

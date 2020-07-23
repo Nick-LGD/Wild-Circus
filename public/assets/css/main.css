@@ -1,20 +1,8 @@
-/*
-| | | |
-| |_| | ___  _ __ ___   ___
-|  _  |/ _ \| '_ ` _ \ / _ \
-| | | | (_) | | | | | |  __/
-\_| |_/\___/|_| |_| |_|\___|
- */
-.box{
-    background-color: red;
-}
-
-.title-home{
+.form-group{
     text-align: center;
 }
-
-.box2{
-    background-color: yellow ;
+.title-home{
+    text-align: center;
 }
 
 .card-title {
@@ -24,20 +12,20 @@
 .card-text{
     text-align: center;
 }
-/*
-  _____      _
- |  __ \    (_)
- | |__) | __ _  ___ ___
- |  ___/ '__| |/ __/ _ \
- | |   | |  | | (_|  __/
- |_|   |_|  |_|\___\___|
 
-*/
 
 .h1-title-public{
     text-align: center;
 }
 
-.linear-gradient{
+.location{
+    text-align: center;
+}
 
+.date{
+    text-align: center;
+}
+
+.title{
+    text-align: center;
 }
