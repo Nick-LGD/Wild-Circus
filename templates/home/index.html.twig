@@ -57,6 +57,7 @@
     </div>
     <h3 class="title-home">Quelques spectacles</h3>
         {% for performance in performances %}
+            <div data-aos="fade-right">
             <div class="card mb-5 mt-5 w-100 h-100">
                 <div class="card-body">
                     {% if  performance.image is not null %}
@@ -73,6 +74,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         {% endfor %}
 {% endblock %}

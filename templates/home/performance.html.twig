@@ -2,8 +2,8 @@
 {% block title %}Wild Circus - Performances{% endblock %}
 {% block body %}
     <h1 class="h1-title-public mb-5 mt-5">Nos performances</h1>
-    <div class="box-perf-page-public">
         {% for performance in performances %}
+            <div data-aos="flip-left">
             <div class="card mb-5 mt-5 card-performance-public">
                 {% if  performance.image is not null %}
                     <img src="{{ vich_uploader_asset(performance, 'imageFile') }}" class="card-img-top" alt="{{ performance.title }}">
