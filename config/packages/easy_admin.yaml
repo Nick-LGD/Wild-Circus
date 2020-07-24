@@ -1,0 +1,34 @@
+easy_admin:
+  design:
+  site_name: 'Wild Circus <b>Admin</b>'
+  user:
+    display_name: true
+    display_avatar: true
+    name_property_path: 'fullName'
+  entities:
+    Performance:
+      class: App\Entity\Performance
+      label: "Performance"
+      form:
+        fields:
+          - title
+          - description
+          - {type: 'group', icon: 'clip', label: 'Attachments', css_class: 'col-lg-5'}
+          - { property: 'imageFile', type: 'vich_image' }
+      list:
+        collapse_actions: true
+        actions: ['show', 'edit', 'delete']
+        batch_actions: ['delete']
+        fields: ['title', 'description', {property: 'image', type: 'image', base_path: '%uploads_path%'}]
+      show:
+        fields:
+          - title
+          - description
+          - {property: 'image', type: 'image', base_path: '%uploads_path%'}
+
+    Planing:
+       class: App\Entity\Planing
+       label: "Planning"
+
+    Price:
+       class: App\Entity\Price

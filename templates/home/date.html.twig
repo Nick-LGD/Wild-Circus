@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block title %}Wild Circus - Dates{% endblock %}
+{% block body %}
+    <h1 class="h1-title-public mb-5 mt-5">Prochaines dates</h1>
+        {% for date in dates %}
+            <div data-aos="fade-right">
+            <div class="card bg-light mb-5 mt-5">
+                <div class="card-header title">{{ date.title }}</div>
+                <div class="card-body">
+                    <p class="date"> {{ date.location }} - Le {{ date.infodate|date("d/m/Y : H:i", "Europe/Paris") }}</p>
+            </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+
