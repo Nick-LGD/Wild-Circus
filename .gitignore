@@ -9,6 +9,9 @@ migrations
 /public/bundles/
 /var/
 /vendor/
+.idea
+migrations
+
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
